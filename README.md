@@ -1,5 +1,7 @@
 *Proyecto*
-*Alumno*
+
+
+*Alumnos*
 
 - Lizarraga Cañedo Abraham Levi
 - Flores Macias Abish Irma Rosa

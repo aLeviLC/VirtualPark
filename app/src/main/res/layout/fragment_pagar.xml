@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Fondo opaco cuando el video se reproduce -->
+    <View
+        android:id="@+id/dim_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:elevation="1000dp"
+        android:visibility="gone" />
+
+    <!-- VideoView para mostrar el anuncio centrado y en un tamaño específico -->
+    <VideoView
+        android:id="@+id/vv_ad_video"
+        android:layout_width="360dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:elevation="10000dp"
+        android:visibility="gone" />
+
+    <!-- ScrollView para la lista de métodos de pago -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_above="@+id/payment_buttons"
+        tools:ignore="UnknownId">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Botón de regreso -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back"
+                    android:src="@drawable/ic_arrow_back"
+                    android:translationY="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Pagar"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:translationX="10dp" />
+            </LinearLayout>
+
+            <!-- Contenedor de métodos de pago -->
+            <LinearLayout
+                android:id="@+id/payment_methods_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="16dp" />
+
+            <!-- Botón para añadir nueva tarjeta -->
+            <Button
+                android:id="@+id/btn_add_payment_method"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFDD00"
+                android:text="+ Añadir tarjeta"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <!-- Botón para ver anuncio con icono de video -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Si ves el anuncio\nobtienes un descuento de 2$"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:backgroundTint="#FFDD00"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_video_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_video" />
+
+                <Button
+                    android:id="@+id/btn_watch_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver anuncio"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón de Pago -->
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFDD00"
+        android:text="Pagar\n$8 MXN"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:translationY="-30dp" />
+</RelativeLayout>

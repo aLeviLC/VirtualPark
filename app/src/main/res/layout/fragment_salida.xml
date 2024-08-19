@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Título: ¡Has pagado! -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_payment_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Has pagado!"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <!-- Icono de Check -->
+    <ImageView
+        android:id="@+id/iv_check_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_check_circle"
+        android:layout_gravity="center" />
+
+    <!-- Código QR -->
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="226dp"
+        android:layout_height="214dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Código QR de salida" />
+
+    <!-- Texto explicativo -->
+    <TextView
+        android:id="@+id/tv_gracias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Al salir, acerca este código al lector."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Temporizador -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tienes 14:59 min para salir"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Botón Continuar -->
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FFDD00"
+        android:text="Continuar"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+    <!-- Logo de la empresa -->
+    <TextView
+        android:id="@+id/tv_gracias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Gracias por usar:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:translationY="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_company_logo"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/vp"
+        android:translationY="-120dp" />
+</LinearLayout>

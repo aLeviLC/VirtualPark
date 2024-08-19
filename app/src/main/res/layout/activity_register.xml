@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Botón de retroceso -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back"
+                    android:src="@drawable/ic_arrow_back"
+                    android:translationY="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Registro"
+                    android:textColor="#000000"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Título Registro -->
+
+            <!-- Campos de Texto -->
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Nombre"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Apellido Paterno"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_mother_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Apellido Materno"
+                android:textColor="#000000" />
+
+            <!-- Campo para el teléfono con selector de código de país -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <!-- Selector de código de país -->
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_defaultNameCode="MX"
+                    app:ccp_showArrow="true"
+                    app:ccp_showFlag="true"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false" />
+
+                <!-- Campo de texto para el teléfono -->
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CCCCCC"
+                    android:hint="Teléfono"
+                    android:inputType="phone"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <!-- Campo de contraseña con botón de mostrar/ocultar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:elevation="2dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CCCCCC"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#000000" />
+
+                <ImageButton
+                    android:id="@+id/btn_toggle_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Mostrar/Ocultar contraseña"
+                    android:padding="12dp"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:src="@drawable/ic_eye_off" />
+            </LinearLayout>
+
+            <!-- Campo para confirmar contraseña con botón de mostrar/ocultar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:elevation="2dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_confirm_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CCCCCC"
+                    android:hint="Verificar Contraseña"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <!-- Botón Listo -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="La contraseña debe tener al menos 8 caracteres." />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="121dp"
+                android:layout_height="58dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#FFDD00"
+                android:enabled="false"
+                android:text="Listo"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <!-- Logo al final -->
+
+            <ImageView
+                android:layout_width="358dp"
+                android:layout_height="126dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/vp"
+                android:translationY="-60dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ProgressBar centrado -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:translationY="80dp"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

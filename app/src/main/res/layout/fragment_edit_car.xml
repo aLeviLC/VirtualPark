@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Espacio superior -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="19dp" />
+
+    <!-- Sección de título y botón de regreso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Regresar"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Auto"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Espacio entre título y contenido -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Placas del auto -->
+    <EditText
+        android:id="@+id/et_car_plates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Placas"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:maxLength="7" />
+
+    <!-- Marca del auto -->
+    <EditText
+        android:id="@+id/et_car_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marca"
+        android:layout_marginTop="16dp"
+        android:inputType="text" />
+
+    <!-- Modelo del auto -->
+    <EditText
+        android:id="@+id/et_car_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Modelo"
+        android:layout_marginTop="16dp"
+        android:inputType="text" />
+
+    <!-- Año del auto (Spinner) -->
+    <Spinner
+        android:id="@+id/spinner_car_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón para guardar -->
+    <Button
+        android:id="@+id/btn_save_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Guardar"
+        android:backgroundTint="#FFDD00"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "835211408247",
+    "firebase_url": "https://virtualpark-53bca-default-rtdb.firebaseio.com",
+    "project_id": "virtualpark-53bca",
+    "storage_bucket": "virtualpark-53bca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835211408247:android:c66f38653f4f3bb76ae772",
+        "android_client_info": {
+          "package_name": "com.example.virtualpark"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmn2lYaNYT5nrT3bAGvNrDyVZWx1ne6vI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

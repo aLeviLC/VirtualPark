@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VirtualPark" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/back</item>
+        <item name="backgroundColor">@color/back</item>
+        <item name="background">@color/back</item>
+    </style>
+    <style name="Theme.VirtualPark" parent="Base.Theme.VirtualPark" />
+</resources>

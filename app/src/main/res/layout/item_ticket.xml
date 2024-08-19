@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_ticket_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fecha del boleto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_expand_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ticket_details"
+        android:layout_width="190dp"
+        android:layout_height="300dp"
+        android:background="@drawable/ticket_background"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:translationX="80dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="216dp"
+            android:layout_height="199dp"
+            android:layout_gravity="center"
+            android:translationY="25dp" />
+
+        <TextView
+            android:id="@+id/tv_ticket_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:text="ID: 1234567890"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:translationY="15dp" />
+    </LinearLayout>
+</LinearLayout>

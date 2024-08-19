@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Título para el escaneo -->
+    <TextView
+        android:id="@+id/tv_scanner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Escanea tu boleto aquí"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationY="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Vista previa de la cámara -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_scanner_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Marco del QR -->
+    <ImageView
+        android:id="@+id/qr_frame"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/qr_frame"
+        app:layout_constraintTop_toTopOf="@id/previewView"
+        app:layout_constraintBottom_toBottomOf="@id/previewView"
+        app:layout_constraintStart_toStartOf="@id/previewView"
+        app:layout_constraintEnd_toEndOf="@id/previewView" />
+
+    <!-- Línea de escaneo animada -->
+    <ImageView
+        android:id="@+id/scan_line"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@drawable/scan_line"
+        android:translationY="-100dp"
+        app:layout_constraintBottom_toBottomOf="@id/qr_frame"
+        app:layout_constraintEnd_toEndOf="@id/qr_frame"
+        app:layout_constraintStart_toStartOf="@id/qr_frame"
+        app:layout_constraintTop_toTopOf="@id/qr_frame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

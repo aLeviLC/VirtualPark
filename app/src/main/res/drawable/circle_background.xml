@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Fondo sólido -->
+    <solid android:color="#FFFFFF"/> <!-- Puedes cambiar este color según tus necesidades -->
+
+    <!-- Borde opcional -->
+    <stroke
+        android:width="2dp"
+        android:color="#BBBBBB"/> <!-- Cambia el color y el ancho del borde según tus preferencias -->
+
+</shape>

@@ -1,0 +1,57 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo blanco del ticket -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <corners android:radius="8dp"/>
+            <stroke android:width="2dp" android:color="#FFDD00"/>
+        </shape>
+    </item>
+
+    <!-- Recortes de las esquinas para darle apariencia de ticket -->
+    <item android:top="0dp" android:left="0dp" android:right="0dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners
+                android:topLeftRadius="12dp"
+                android:topRightRadius="12dp"
+                android:bottomLeftRadius="12dp"
+                android:bottomRightRadius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Añadir pequeños círculos en las esquinas para simular cortes de ticket -->
+    <item android:right="-10dp" android:top="-10dp">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="#FFFFFF"/>
+            <stroke android:width="2dp" android:color="#FFDD00"/>
+        </shape>
+    </item>
+
+    <item android:left="-10dp" android:top="-10dp">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="#FFFFFF"/>
+            <stroke android:width="2dp" android:color="#FFDD00"/>
+        </shape>
+    </item>
+
+    <item android:right="-10dp" android:bottom="-10dp">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="#FFFFFF"/>
+            <stroke android:width="2dp" android:color="#FFDD00"/>
+        </shape>
+    </item>
+
+    <item android:left="-10dp" android:bottom="-10dp">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="#FFFFFF"/>
+            <stroke android:width="2dp" android:color="#FFDD00"/>
+        </shape>
+    </item>
+
+</layer-list>
